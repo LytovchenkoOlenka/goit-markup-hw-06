@@ -432,25 +432,21 @@
                 </ul>
         </div>
 
-        <form class="subscribe-form">
-
-          <div class="input-container">
-            <p class="footer-title">Social media</p>
-            <label>
-              <!-- Subscribe -->
-            <input type="email" name="email-subscribe" class="email-input" placeholder="E-mail">
-            </label>
-          </div>
-
-            <button type="submit" class="subscribe-button button">
-              Subscribe
-              <span class="icon-container">
-                <svg class="icon-subscribe" width="24" height="24">
-                  <use href="./images/icons.svg#icon-subscribe"></use>
-                </svg>
-              </span>
-            </button> 
-        </form>
+        <div class="footer-subscribe-container">
+          <p class="footer-title">Subscribe</p>
+          <form class="subscribe-form">
+              <label class="subscribe-label">
+                <input type="email" name="email-subscribe" class="email-input" placeholder="E-mail">
+              </label>
+      
+              <button type="submit" class="subscribe-button button">
+                Subscribe
+                  <svg class="icon-subscribe" width="24" height="24">
+                    <use href="./images/icons.svg#icon-subscribe"></use>
+                  </svg>
+              </button> 
+          </form>
+        </div>
 
       </div>
     </footer>
@@ -500,13 +496,12 @@
 
           <div class="input-field">
           <label for="user-comment" class="modal-item">Comment</label>
-            <textarea name="comment" id="user-comment" class="modal-comment modal-input" placeholder="Text input"></textarea>
+            <textarea name="user-comment" id="user-comment" class="modal-comment modal-input" placeholder="Text input"></textarea>
           </div>
             
           <div class="checkbox-privacy-policy">
-            <label for="user-privacy" class="privacy-policy-label">
             <input type="checkbox" name="user-privacy" value="true" id="user-privacy" class="checkbox-modal visually-hidden">
-
+            <label for="user-privacy" class="privacy-policy-label">
               <span class="checkbox-icon"> 
                 <svg class="icon-checked" width="10" height="8">
                   <use href="./images/icons.svg#icon-checked"></use>

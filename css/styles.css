@@ -544,29 +544,32 @@ img {
   background-color: var(--success);
 }
 /* --------------FOOTER-EMAIL----------- */
-.subscribe-form {
-  display: flex;
+
+.footer-subscribe-container {
   padding-top: 100px;
   padding-bottom: 132px;
 }
 
-.input-container {
-  width: 264px;
-  margin-right: 24px;
+.subscribe-form {
+  display: flex;
+  gap: 24px;
 }
 
 .email-input {
-  width: 100%;
+  width: 264px;
   height: 40px;
 
-  background-color: var(--dark-background);
+  background-color: transparent;
   color: #ffffff;
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  box-sizing: border-box;
 
-  padding: 8px 16px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  padding-left: 16px;
+
+  border-radius: 4px;
 }
 
 .email-input::placeholder {
@@ -574,25 +577,23 @@ img {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
-
   align-items: center;
   letter-spacing: 0.04em;
 }
 
 .subscribe-button {
-  display: inline-flex;
-  margin-top: 40px;
-  padding: 8px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   font-family: "Roboto", sans-serif;
-  background-color: var(--primary-brand);
-  color: #fff;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  align-items: center;
   letter-spacing: 0.04em;
+
+  background-color: var(--primary-brand);
+  color: #fff;
 
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -832,6 +833,9 @@ img {
 }
 
 .modal-item {
+  display: block;
+
+  margin-bottom: 4px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -839,11 +843,6 @@ img {
   letter-spacing: 0.04em;
 
   color: var(--helper-text);
-}
-
-.input-field {
-  position: relative;
-  margin-top: 4px;
 }
 
 .modal-icon {
@@ -857,17 +856,24 @@ img {
 }
 
 .modal-input {
-  outline: none;
   position: relative;
 
   width: 100%;
   height: 40px;
-  padding: 11px 36px;
+  padding-left: 38px;
   border: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  outline: transparent;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 16px;
 }
 
 .input-field:focus-within > .modal-icon {
@@ -875,7 +881,7 @@ img {
 }
 
 .input-field:focus-within > .modal-input {
-  border: 1px solid var(--pressed-state);
+  border-color: var(--primary-brand);
 }
 
 .modal-comment {
@@ -884,6 +890,12 @@ img {
   padding: 8px 16px;
   margin-top: 8px;
   margin-bottom: 16px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.2);
 }
 
 .modal-comment.modal-input::placeholder {
@@ -897,44 +909,47 @@ img {
   position: absolute;
 }
 
-.checkbox-icon {
-  display: inline-flex;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-
-  justify-content: center;
-  align-items: center;
-
-  margin-right: 8px;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-checked {
-  width: 10px;
-  height: 8px;
-  fill: transparent;
-}
-
-.checkbox-modal:checked + .checkbox-icon {
-  background-color: var(--pressed-state);
-}
-
 .privacy-policy-label {
   display: flex;
 
   font-style: normal;
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--helper-text);
 }
 
+.privacy-policy-link {
+  color: var(--primary-brand);
+  margin-left: 2px;
+}
+
+.checkbox-icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+
+  margin-right: 8px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-modal:checked + .checkbox-icon {
+  background-color: var(--pressed-state);
+  border: none;
+  fill: #ffffff;
+}
+
 .modal-send-button {
-  display: flex;
+  display: block;
   justify-content: center;
   padding: 8px 24px;
   margin: 24px auto;
@@ -952,8 +967,8 @@ img {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  min-width: 165px;
-  height: 40px;
+  min-width: 169px;
+  height: 56px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

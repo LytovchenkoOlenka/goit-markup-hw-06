@@ -812,10 +812,6 @@ img {
   margin-bottom: 8px;
 }
 
-.modal-form {
-  margin-bottom: 16px;
-}
-
 .modal-title {
   font-style: normal;
   font-weight: 500;
@@ -870,7 +866,6 @@ img {
 
 .input-field {
   position: relative;
-  margin-bottom: 16px;
 }
 
 .input-field:focus-within > .modal-icon {

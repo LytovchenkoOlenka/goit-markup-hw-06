@@ -876,11 +876,14 @@ img {
   border-color: var(--primary-brand);
 }
 
+.comment-field {
+  margin-bottom: 16px;
+}
+
 .modal-comment {
   resize: none;
   height: 120px;
   padding: 8px 16px;
-  margin-bottom: 16px;
 
   font-size: 12px;
   line-height: 1.17;
@@ -938,7 +941,7 @@ img {
 .checkbox-modal:checked + label > .checkbox-icon {
   background-color: var(--pressed-state);
   border: none;
-  fill: #ffffff;
+  fill: var(--light-mode);
 }
 
 .modal-send-button {
